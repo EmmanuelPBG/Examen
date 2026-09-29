@@ -13,8 +13,8 @@ public class ProductsController : ControllerBase
     [HttpGet("{id:int}")]
     public IActionResult GetById(int id)
     {
-        var product = FakeDatabase.Products.FirstOrDefault(p => p.Id != id); // ERROR INTENCIONAL
-
+        var product = FakeDatabase.Products.FirstOrDefault(p => p.Id == id); /* ERROR INTENCIONAL. Solución: Dentro de la expresión el Id de la FakeDatabase no estaba tomando el id correcto del get por el != 
+        'que no sea igual' mejor == para igualar al id correcto*/
         if (product is null)
             return NotFound();
 

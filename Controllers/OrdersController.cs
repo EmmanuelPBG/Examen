@@ -25,8 +25,8 @@ public class OrdersController : ControllerBase
         if (product.Stock < request.Quantity)
             return BadRequest("Stock insuficiente.");
 
-        var total = product.Price + request.Quantity; // ERROR INTENCIONAL
-        product.Stock -= 1; // ERROR INTENCIONAL
+        var total = product.Price * request.Quantity; /*ERROR INTENCIONAL Solución: Estaba sumando en vez de multiplicar en el calculo*/ 
+        product.Stock -= request.Quantity; /*ERROR INTENCIONAL Solución: Estaba restando en uno la cantidad del stock. Lo correcto es la cantidad que se solictia en la petición*/ 
 
         return Ok(new
         {
