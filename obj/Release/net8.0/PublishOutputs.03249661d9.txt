@@ -1,0 +1,10 @@
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores.postman_collection.json
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores.dll
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores.deps.json
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores.runtimeconfig.json
+/workspaces/Examen/bin/Release/net8.0/publish/EntrevistaApiNet8Errores.pdb
+/workspaces/Examen/bin/Release/net8.0/publish/Microsoft.OpenApi.dll
+/workspaces/Examen/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/workspaces/Examen/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/workspaces/Examen/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll

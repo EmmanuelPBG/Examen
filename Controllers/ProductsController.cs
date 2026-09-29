@@ -13,7 +13,7 @@ public class ProductsController : ControllerBase
     [HttpGet("{id:int}")]
     public IActionResult GetById(int id)
     {
-        var product = FakeDatabase.Products.FirstOrDefault(p => p.Id != id); // ERROR INTENCIONAL
+        var product = FakeDatabase.Products.FirstOrDefault(p => p.Id == id);
 
         if (product is null)
             return NotFound();

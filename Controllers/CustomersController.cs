@@ -17,7 +17,7 @@ public class CustomersController : ControllerBase
         if (string.IsNullOrWhiteSpace(customer.Name))
             return BadRequest("El nombre es obligatorio.");
 
-        if (customer.Email.Contains("@")) // ERROR INTENCIONAL
+        if (string.IsNullOrWhiteSpace(customer.Email)  || !customer.Email.Contains("@")) 
             return BadRequest("El correo no tiene un formato valido.");
 
         customer.Id = FakeDatabase.Customers.Max(c => c.Id) + 1;

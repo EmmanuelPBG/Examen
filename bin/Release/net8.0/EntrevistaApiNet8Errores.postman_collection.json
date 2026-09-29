@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "Entrevista .NET 8 - APIs con errores",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" }
+  ],
+  "item": [
+    {
+      "name": "Ejercicio 1 - Obtener producto 2",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/products/2"
+      }
+    },
+    {
+      "name": "Ejercicio 1 - Producto inexistente",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/products/999"
+      }
+    },
+    {
+      "name": "Ejercicio 2 - Crear cliente con correo valido",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Emmanuel Morales\",\n  \"email\": \"emmanuel@empresa.com\"\n}"
+        },
+        "url": "{{baseUrl}}/api/customers"
+      }
+    },
+    {
+      "name": "Ejercicio 2 - Crear cliente con correo invalido",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Usuario Prueba\",\n  \"email\": \"correo-invalido\"\n}"
+        },
+        "url": "{{baseUrl}}/api/customers"
+      }
+    },
+    {
+      "name": "Ejercicio 3 - Crear pedido",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productId\": 1,\n  \"quantity\": 2\n}"
+        },
+        "url": "{{baseUrl}}/api/orders"
+      }
+    }
+  ]
+}
